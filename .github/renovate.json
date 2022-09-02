@@ -1,0 +1,11 @@
+{
+  "extends": [
+    ":ignoreModulesAndTests",
+    ":label(renovate)",
+    ":prConcurrentLimit10",
+    ":timezone(Asia/Tokyo)",
+    ":unpublishSafe",
+    ":automergeMinor",
+    ":dependencyDashboard"
+  ]
+}
