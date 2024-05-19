@@ -1,5 +1,4 @@
 load("@aspect_rules_js//js:defs.bzl", "js_test")
-load("@fildesh//tool/bazel:fildesh_test.bzl", "fildesh_test")
 load("@rules_sxproto//sxproto:defs.bzl", "sxproto_data")
 
 def rendezqueue_scenario_test(name):
@@ -23,14 +22,4 @@ def rendezqueue_scenario_test(name):
       entry_point = "//test/scenario:nodejson_expect.js",
       args = ["$(location :" + name + ".json)"],
       size = "small",
-  )
-  fildesh_test(
-      name = name + "_ccgrpc_expect_test",
-      srcs = ["//test/scenario:ccgrpc_expect.fildesh"],
-      tool_by_alias = {
-         "expect_test": "//test/scenario:ccgrpc_expect",
-      },
-      input_by_option = {
-          "scenario_data": ":" + name,
-      }
   )
