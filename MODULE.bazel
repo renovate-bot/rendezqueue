@@ -3,11 +3,11 @@ module(
     version = "0.0.0",
 )
 
-bazel_dep(name = "aspect_bazel_lib", version = "2.7.3")
-bazel_dep(name = "aspect_rules_js", version = "1.42.1")
-bazel_dep(name = "bazel_skylib", version = "1.6.1")
+bazel_dep(name = "aspect_bazel_lib", version = "2.7.8")
+bazel_dep(name = "aspect_rules_js", version = "1.42.3")
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "rules_license", version = "0.0.8")
-bazel_dep(name = "rules_proto", version = "6.0.0")
+bazel_dep(name = "rules_proto", version = "6.0.2")
 
 bazel_dep(
     name = "fildesh",
@@ -16,7 +16,7 @@ bazel_dep(
 git_override(
     module_name = "fildesh",
     remote = "https://github.com/fildesh/fildesh.git",
-    commit="29ef2da4a4c4aeda9c0af917b95fc2c493d4f96d",
+    commit="ebc9fd35d2fd4733287b417bb5149077933fd2b5",
 )
 bazel_dep(
     name = "rules_sxproto",
